@@ -1,0 +1,20 @@
+#widget{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin:0 auto;
+    padding:8px;
+}
+label{
+    color: blue;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.options{
+    margin: 8px 0;
+}
+footer{
+    border: 2px solid blue;
+    height: 100px;
+    margin-top: 24px;
+}
