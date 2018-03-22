@@ -16,7 +16,7 @@
                 <p>You will need a few inputs to make this work properly.  You can delete this comment once you feel you know how many variables you need.</p>
                 <div class="options">
                     <label>Price</label>
-                    <input type="" name="" value=""></input>
+                    <input id="price"type="" name="" value=""></input>
                 </div>
                 <div class="options">
                     <label>Shipping</label><br><br>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="options">
                     <label>City</label>
-                    <input type="" name="" value="">
+                    <input id="" type="" name="" value="">
                 </div>
                 <button onclick="calculate()">Calculate</button>
             </div>
@@ -59,11 +59,36 @@
         ]
 
         if(tax10000.includes(shippingLocation)){
+             shippingTax = 1.10;
             //think about it
         }
-
-
-
-        }
+        else if(tax1025.includes(shippingLocation)){
+             shippingTax = 1.025;
+       }
+       else if(tax8250.includes(shippingLocation)){
+             shippingTax = 1.0825;
+       }
+       else if(tax8750.includes(shippingLocation)){
+             shippingTax = 1.0875;
+       }
+       else if(tax8500.includes(shippingLocation)){
+             shippingTax =  1.0850;
+       }
+       else if(tax9250.incudes(shippingLocation)){
+             shippingTax = 1.0925;
+       }
+       else if(tax9750.includes(shippingLocation)){
+             shippingTax = 1.0975;
+       }
+       else if(tax10750.includes(shippingLocation)){
+             shippingTax = 1.0750;
+       }
+       else if(tax9000.includes(shippingLocation)){
+             shippingTax = 1.09;
+      }
+       else if(tax7500.includes(shippingLocation)){
+             shippingTax = 1.0750
+       }
+ }
     </script>
 </html>
