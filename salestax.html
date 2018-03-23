@@ -20,13 +20,17 @@
                 </div>
                 <div class="options">
                     <label>Shipping</label><br><br>
-                    <input type="radio" name="shipping" value="standard">Standard</input><br>
-                    <input type="radio" name="shipping" value="Priority">Priority</input><br>
-                    <input type="radio" name="shipping" value="Express">Express</input><br>
+                    <select id="shipping" name="shippiing">
+                        <option value="standard">standard</option>
+                        <option value="priority">priority</option>
+                        <option value="express">express</option>
+                    </select>
+
+
                 </div>
                 <div class="options">
                     <label>City</label>
-                    <input id="" type="" name="" value="">
+                    <input id="city" type="" name="" value="">
                 </div>
                 <button onclick="calculate()">Calculate</button>
             </div>
@@ -40,9 +44,9 @@
         function calculate(){
 
         //Query select your information
-        let price;
+        let price = doc.querySelector('#price');
         let shippingType;
-        let shippingLocation;
+        let shippingLocation = doc.querySelector('#city');
 
         //conditionally choose the shipping tax
         let shippingTax;
