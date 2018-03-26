@@ -42,13 +42,23 @@
     <script type="text/javascript">
 
         function calculate(){
-
+            const doc = document;
         //Query select your information
-        let price = doc.querySelector('#price');
-        let shippingType;
-        let shippingLocation = doc.querySelector('#city');
+        let price = doc.querySelector('#price').value;
+        let shippingType = doc.querySelector('#shipping').value;
+        let shippingLocation = doc.querySelector('#city').value;
 
+        if(shippingType=="express"){
+            shippingType=8.99
+        }
+        if(shippingType == "priority"){
+            shippingType=4.99
+        }
+        if(shippingType== "standard"){
+            shippingType=2.99
+        }
         //conditionally choose the shipping tax
+
         let shippingTax;
         let tax10000 = ['Peoria','Arlington Heights','Schaumburg','Evanston','Palatine'];
         let tax10250 = ['Chicago','Elgin','Skokie'];
@@ -60,7 +70,7 @@
         let tax10750 = ['Cicero'];
         let tax9000 = ['Champaign'];
         let tax7500 = ['Naperville'];
-        ]
+        
 
         if(tax10000.includes(shippingLocation)){
              shippingTax = 1.10;
@@ -93,6 +103,8 @@
        else if(tax7500.includes(shippingLocation)){
              shippingTax = 1.0750
        }
- }
+       let totalCost = (price)(1.0625)+(shippingType)(shippingTax);
+       answer.innerHTML = totalCost;
+   }
     </script>
 </html>
