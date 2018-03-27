@@ -44,11 +44,11 @@
         function calculate(){
             const doc = document;
         //Query select your information
-        let price = doc.querySelector('#price').value;
+        let price = Number(doc.querySelector('#price').value) ;
         let shippingType = doc.querySelector('#shipping').value;
         let shippingLocation = doc.querySelector('#city').value;
 
-        if(shippingType=="express"){
+        if(shippingType =="express"){
             shippingType=8.99
         }
         if(shippingType == "priority"){
@@ -70,7 +70,7 @@
         let tax10750 = ['Cicero'];
         let tax9000 = ['Champaign'];
         let tax7500 = ['Naperville'];
-        
+
 
         if(tax10000.includes(shippingLocation)){
              shippingTax = 1.10;
@@ -103,8 +103,7 @@
        else if(tax7500.includes(shippingLocation)){
              shippingTax = 1.0750
        }
-       let totalCost = (price)(1.0625)+(shippingType)(shippingTax);
-       answer.innerHTML = totalCost;
+       let totalCost = answer.innerHTML((price * 1.0625)+(shippingType * shippingTax));
    }
     </script>
 </html>
