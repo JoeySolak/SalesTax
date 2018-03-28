@@ -44,7 +44,7 @@
         function calculate(){
             const doc = document;
         //Query select your information
-        let price = Number(doc.querySelector('#price').value) ;
+        let price = Number(doc.querySelector('#price').value);
         let shippingType = doc.querySelector('#shipping').value;
         let shippingLocation = doc.querySelector('#city').value;
 
@@ -76,7 +76,7 @@
              shippingTax = 1.10;
             //think about it
         }
-        else if(tax1025.includes(shippingLocation)){
+        else if(tax10250.includes(shippingLocation)){
              shippingTax = 1.025;
        }
        else if(tax8250.includes(shippingLocation)){
@@ -103,7 +103,8 @@
        else if(tax7500.includes(shippingLocation)){
              shippingTax = 1.0750
        }
-       let totalCost = answer.innerHTML((price * 1.0625)+(shippingType * shippingTax));
+       let totalCost =(price * 1.0625)+(shippingType * shippingTax);
+       answer.innerHTML = totalCost
    }
     </script>
 </html>
